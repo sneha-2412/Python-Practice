@@ -22,14 +22,6 @@ for i in range(n-1,-1,-1):
     else:
         top="* "+"  "*(i-1)+"* "+"  "*(2*n-2*i-2)+"* "+"  "*(i-1)+"* "
         print(top,end="\n")
-#Perfect squares in range of a and b
-a=int(input())
-b=int(input())
-count=0
-for i in range(int(a**0.5),int(b**0.5+1)):
-    if(i*i<=b and i*i>=a):
-        count+=1
-print(count)
 #inverted hollow pyramid
 n=int(input())
 for i in range(n):
@@ -37,6 +29,15 @@ for i in range(n):
 for i in range(n-1,0,-1):
     if i==1:
         print(" "*(n-i)+"* ",end="\n")
+#solid right angled triangle
+n=int(input())
+for i in range(1,n+1):
+    print("  "*(n-i)+"* "*(i),end="\n")
+#inverted right triangle
+n=int(input())
+print("* "*(2*n-1))
+for i in range(1,n+1):
+    print("  "*(2*i)+"* "*(2*n-2*i-1))
     else:
         print(" "*(n-i)+"* "+" "*(2*i-4)+"*",end="\n")
 #solid right angled triangle
