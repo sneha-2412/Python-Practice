@@ -87,4 +87,37 @@ for i in n:
         str=str+"_"+i.lower()
     else:
         str=str+i
+#overlapping of preffix and suffix of two strings
+m=input()
+n=input()
+suf=""
+pre=""
+flag=0
+for i in range(1,min(len(m),len(n))):
+        pre=m[-i:]
+        suf=n[:i]
+        if pre == suf:
+            print(pre)
+            flag=1
+            break
+if(flag==0):
+    print("No overlapping")
+#remove the words in sentence with given length
+li=input().split()
+k=int(input())
+op=""
+for i in li:
+    if len(i)!=k:
+        op+=i +" "
+print(op)
+#Shift numbers to end of string
+n=input()
+string=""
+digits=""
+for i in n:
+    if i.isdigit():
+        digits+=i
+    else:
+        string+=i
+print(string+digits)
 print(str.strip())
