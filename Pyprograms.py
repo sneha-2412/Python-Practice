@@ -121,3 +121,21 @@ for i in n:
         string+=i
 print(string+digits)
 print(str.strip())
+#Frequency of each word in a sentence
+n=input().split()
+frequency={}
+for i in n:
+    if i not in frequency:
+        frequency[i]=n.count(i)
+for key,value in frequency.items():
+    print("{}: {}".format(key,value))
+#sum and average of digits in a string
+n=input()
+count=0
+sum1=0
+for i in n:
+    if i.isdigit():
+        sum1=sum1+int(i)
+        count+=1
+print(sum1)
+print(round(sum1/count,2))
