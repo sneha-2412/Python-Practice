@@ -139,3 +139,59 @@ for i in n:
         count+=1
 print(sum1)
 print(round(sum1/count,2))
+#consecutive sum of elements in list
+def each_row(print_list):
+    while(len(print_list)>1):
+        outlist=calculate(print_list)
+        print(outlist)
+        print_list=outlist
+def calculate(sum_list):
+    return_list=[]
+    for i in range(len(sum_list)-1):
+        return_list.append(sum_list[i]+sum_list[i+1])
+    return return_list
+int_list=list(map(int,input().split(',')))
+print(int_list)
+each_row(int_list)
+#Grouping of scores
+input_=input().split(',')
+input_.sort()
+dict1={}
+for i in input_:
+    key,value=(i.split(':'))
+    if key in dict1:
+        dict1[key]=int(dict1[key])+int(value)
+    else:
+        dict1[key]=int(value)
+print(list(dict1.items()))
+#is one string rotation of another
+s1=input()
+s2=input()
+flag=0
+if len(s1)==len(s2):
+    for i in range(len(s1)):
+        on_rotate=s2[i:]+s2[:i]
+        if(s1==on_rotate):
+            flag=1
+            print(i)
+    if flag==0:
+        print("No Match")
+else:
+    print("No Match")
+#sum and average of numbers in a string
+def finding_list(s):
+    outlist=[]
+    i=0
+    while i<len(s):
+        ss=""
+        while(s[i].isdigit()):
+            ss=ss+s[i]
+            i=i+1
+        if(len(ss)>0):
+            outlist.append(ss)
+        i=i+1
+    outlist=list(map(int,outlist))
+    print(sum(outlist))
+    print(round(sum(outlist)/len(outlist),2))
+s=input()
+finding_list(s+" ")
