@@ -191,3 +191,26 @@ def finding_list(s):
     print(round(sum(outlist)/len(outlist),2))
 s=input()
 finding_list(s+" ")
+
+#map
+def square(n):
+   return n * n
+numbers = [1, 2, 3, 4]
+result = map(square, numbers)
+numbers_square = list(result)
+print(numbers_square)
+
+#filter
+def is_positive_number(num):
+   return num > 0
+list_a = [1, -2, 3, -4]
+positive_nums = filter(is_positive_number, list_a)
+print(list(positive_nums))
+
+#reduce
+from functools import reduce
+def sum_of_num(a, b):
+   return a+b
+list_a = [1, 2, 3, 4]
+sum_of_list = reduce(sum_of_num, list_a)
+print(sum_of_list)
