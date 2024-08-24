@@ -30,22 +30,6 @@ for i in range(m,n+1):
         count=1
 if(count==0):
     print("-1")
-#sum of non-primes upto n:
-n=int(input())
-a=[]
-sum1=0
-flag=True
-for i in range(n):
-    a.append(int(input()))
-for j in a:
-    flag=True
-    for k in range(2,j):
-        if(j%k==0):
-            flag=False
-            break
-    if(flag == False):
-        sum1=sum1+j
-print(sum1)
 #Replace with next alphabet
 s=input()
 t=""
